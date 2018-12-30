@@ -1,0 +1,43 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.284703f9-597d-4678-ac93-1dcd376377e9",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "arn:aws:lambda:us-east-1:104353675615:function:ask-custom-programming-trivia-default"
+              }
+            }
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "f14c4c50c7970bb361ecec6662d7cf6a"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "64c997ba8f35ddad22198779363c0c88"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:104353675615:function:ask-custom-programming-trivia-default",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "ask-custom-programming-trivia-default",
+            "handler": "index.handler",
+            "revisionId": "77fa0592-9dd2-44c1-bb4c-b128851978ab",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}
