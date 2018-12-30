@@ -158,8 +158,8 @@ const QuizAnswerHandler = {
 
     speakOutput += getAnswer(property, item);
     var question = ``;
-    //IF YOUR QUESTION COUNT IS LESS THAN 10, WE NEED TO ASK ANOTHER QUESTION.
-    if (attributes.counter < 10) {
+    //IF YOUR QUESTION COUNT IS LESS THAN 5, WE NEED TO ASK ANOTHER QUESTION.
+    if (attributes.counter < 5) {
       speakOutput += getCurrentScore(attributes.quizScore, attributes.counter);
       question = askQuestion(handlerInput);
       speakOutput += question;
@@ -300,56 +300,36 @@ const backgroundImagePath = "https://m.media-amazon.com/images/G/01/mobile-apps/
 const speechConsCorrect = ['Booya', 'All righty', 'Bam', 'Bazinga', 'Bingo', 'Boom', 'Bravo', 'Cha Ching', 'Cheers', 'Dynomite', 'Hip hip hooray', 'Hurrah', 'Hurray', 'Huzzah', 'Oh dear.  Just kidding.  Hurray', 'Kaboom', 'Kaching', 'Oh snap', 'Phew','Righto', 'Way to go', 'Well done', 'Whee', 'Woo hoo', 'Yay', 'Wowza', 'Yowsa'];
 const speechConsWrong = ['Argh', 'Aw man', 'Blarg', 'Blast', 'Boo', 'Bummer', 'Darn', "D'oh", 'Dun dun dun', 'Eek', 'Honk', 'Le sigh', 'Mamma mia', 'Oh boy', 'Oh dear', 'Oof', 'Ouch', 'Ruh roh', 'Shucks', 'Uh oh', 'Wah wah', 'Whoops a daisy', 'Yikes'];
 const data = [
-  {StateName: 'Alabama', Abbreviation: 'AL', Capital: 'Montgomery', StatehoodYear: 1819, StatehoodOrder: 22},
-  {StateName: 'Alaska', Abbreviation: 'AK', Capital: 'Juneau', StatehoodYear: 1959, StatehoodOrder: 49},
-  {StateName: 'Arizona', Abbreviation: 'AZ', Capital: 'Phoenix', StatehoodYear: 1912, StatehoodOrder: 48},
-  {StateName: 'Arkansas', Abbreviation: 'AR', Capital: 'Little Rock', StatehoodYear: 1836, StatehoodOrder: 25},
-  {StateName: 'California', Abbreviation: 'CA', Capital: 'Sacramento', StatehoodYear: 1850, StatehoodOrder: 31},
-  {StateName: 'Colorado', Abbreviation: 'CO', Capital: 'Denver', StatehoodYear: 1876, StatehoodOrder: 38},
-  {StateName: 'Connecticut', Abbreviation: 'CT', Capital: 'Hartford', StatehoodYear: 1788, StatehoodOrder: 5},
-  {StateName: 'Delaware', Abbreviation: 'DE', Capital: 'Dover', StatehoodYear: 1787, StatehoodOrder: 1},
-  {StateName: 'Florida', Abbreviation: 'FL', Capital: 'Tallahassee', StatehoodYear: 1845, StatehoodOrder: 27},
-  {StateName: 'Georgia', Abbreviation: 'GA', Capital: 'Atlanta', StatehoodYear: 1788, StatehoodOrder: 4},
-  {StateName: 'Hawaii', Abbreviation: 'HI', Capital: 'Honolulu', StatehoodYear: 1959, StatehoodOrder: 50},
-  {StateName: 'Idaho', Abbreviation: 'ID', Capital: 'Boise', StatehoodYear: 1890, StatehoodOrder: 43},
-  {StateName: 'Illinois', Abbreviation: 'IL', Capital: 'Springfield', StatehoodYear: 1818, StatehoodOrder: 21},
-  {StateName: 'Indiana', Abbreviation: 'IN', Capital: 'Indianapolis', StatehoodYear: 1816, StatehoodOrder: 19},
-  {StateName: 'Iowa', Abbreviation: 'IA', Capital: 'Des Moines', StatehoodYear: 1846, StatehoodOrder: 29},
-  {StateName: 'Kansas', Abbreviation: 'KS', Capital: 'Topeka', StatehoodYear: 1861, StatehoodOrder: 34},
-  {StateName: 'Kentucky', Abbreviation: 'KY', Capital: 'Frankfort', StatehoodYear: 1792, StatehoodOrder: 15},
-  {StateName: 'Louisiana', Abbreviation: 'LA', Capital: 'Baton Rouge', StatehoodYear: 1812, StatehoodOrder: 18},
-  {StateName: 'Maine', Abbreviation: 'ME', Capital: 'Augusta', StatehoodYear: 1820, StatehoodOrder: 23},
-  {StateName: 'Maryland', Abbreviation: 'MD', Capital: 'Annapolis', StatehoodYear: 1788, StatehoodOrder: 7},
-  {StateName: 'Massachusetts', Abbreviation: 'MA', Capital: 'Boston', StatehoodYear: 1788, StatehoodOrder: 6},
-  {StateName: 'Michigan', Abbreviation: 'MI', Capital: 'Lansing', StatehoodYear: 1837, StatehoodOrder: 26},
-  {StateName: 'Minnesota', Abbreviation: 'MN', Capital: 'St. Paul', StatehoodYear: 1858, StatehoodOrder: 32},
-  {StateName: 'Mississippi', Abbreviation: 'MS', Capital: 'Jackson', StatehoodYear: 1817, StatehoodOrder: 20},
-  {StateName: 'Missouri', Abbreviation: 'MO', Capital: 'Jefferson City', StatehoodYear: 1821, StatehoodOrder: 24},
-  {StateName: 'Montana', Abbreviation: 'MT', Capital: 'Helena', StatehoodYear: 1889, StatehoodOrder: 41},
-  {StateName: 'Nebraska', Abbreviation: 'NE', Capital: 'Lincoln', StatehoodYear: 1867, StatehoodOrder: 37},
-  {StateName: 'Nevada', Abbreviation: 'NV', Capital: 'Carson City', StatehoodYear: 1864, StatehoodOrder: 36},
-  {StateName: 'New Hampshire', Abbreviation: 'NH', Capital: 'Concord', StatehoodYear: 1788, StatehoodOrder: 9},
-  {StateName: 'New Jersey', Abbreviation: 'NJ', Capital: 'Trenton', StatehoodYear: 1787, StatehoodOrder: 3},
-  {StateName: 'New Mexico', Abbreviation: 'NM', Capital: 'Santa Fe', StatehoodYear: 1912, StatehoodOrder: 47},
-  {StateName: 'New York', Abbreviation: 'NY', Capital: 'Albany', StatehoodYear: 1788, StatehoodOrder: 11},
-  {StateName: 'North Carolina', Abbreviation: 'NC', Capital: 'Raleigh', StatehoodYear: 1789, StatehoodOrder: 12},
-  {StateName: 'North Dakota', Abbreviation: 'ND', Capital: 'Bismarck', StatehoodYear: 1889, StatehoodOrder: 39},
-  {StateName: 'Ohio', Abbreviation: 'OH', Capital: 'Columbus', StatehoodYear: 1803, StatehoodOrder: 17},
-  {StateName: 'Oklahoma', Abbreviation: 'OK', Capital: 'Oklahoma City', StatehoodYear: 1907, StatehoodOrder: 46},
-  {StateName: 'Oregon', Abbreviation: 'OR', Capital: 'Salem', StatehoodYear: 1859, StatehoodOrder: 33},
-  {StateName: 'Pennsylvania', Abbreviation: 'PA', Capital: 'Harrisburg', StatehoodYear: 1787, StatehoodOrder: 2},
-  {StateName: 'Rhode Island', Abbreviation: 'RI', Capital: 'Providence', StatehoodYear: 1790, StatehoodOrder: 13},
-  {StateName: 'South Carolina', Abbreviation: 'SC', Capital: 'Columbia', StatehoodYear: 1788, StatehoodOrder: 8},
-  {StateName: 'South Dakota', Abbreviation: 'SD', Capital: 'Pierre', StatehoodYear: 1889, StatehoodOrder: 40},
-  {StateName: 'Tennessee', Abbreviation: 'TN', Capital: 'Nashville', StatehoodYear: 1796, StatehoodOrder: 16},
-  {StateName: 'Texas', Abbreviation: 'TX', Capital: 'Austin', StatehoodYear: 1845, StatehoodOrder: 28},
-  {StateName: 'Utah', Abbreviation: 'UT', Capital: 'Salt Lake City', StatehoodYear: 1896, StatehoodOrder: 45},
-  {StateName: 'Vermont', Abbreviation: 'VT', Capital: 'Montpelier', StatehoodYear: 1791, StatehoodOrder: 14},
-  {StateName: 'Virginia', Abbreviation: 'VA', Capital: 'Richmond', StatehoodYear: 1788, StatehoodOrder: 10},
-  {StateName: 'Washington', Abbreviation: 'WA', Capital: 'Olympia', StatehoodYear: 1889, StatehoodOrder: 42},
-  {StateName: 'West Virginia', Abbreviation: 'WV', Capital: 'Charleston', StatehoodYear: 1863, StatehoodOrder: 35},
-  {StateName: 'Wisconsin', Abbreviation: 'WI', Capital: 'Madison', StatehoodYear: 1848, StatehoodOrder: 30},
-  {StateName: 'Wyoming', Abbreviation: 'WY', Capital: 'Cheyenne', StatehoodYear: 1890, StatehoodOrder: 44},
+  {Fact: 'to Who created Linux?', Answer: 'Linus Torvalds'},
+  {Fact: 'What is the oldest Programming Language?', Answer: 'Fortran'},
+  {Fact: 'Who is the creator of the JavaScript scripting language?', Answer: 'Brendan Eich'},
+  {Fact: 'What is the origin of the Python scripting language\'s name?', Answer: 'Monty Python\'s Flying Circus'},
+  {Fact: 'What was Java called before it was Java?', Answer: 'Oak'},
+  {Fact: 'Who founded the "Free Software Foundation"?', Answer: 'Richard Stallman'},
+  {Fact: 'In what year was the specification for the COBOL language created?', Answer: 1959},
+  {Fact: 'What does the acronym SMTP stand for?', Answer: 'Simple Mail Transport Protocol'},
+  {Fact: 'Who was the child of a famous poet and English mathematician whom many historians consider the first programmer?', Answer: 'Ada Lovelace'},
+  {Fact: 'What does GIMP stand for?', Answer: ' GNU Image Manipulation Program'},
+  {Fact: 'What HTML tag can you use to apply CSS rules to a document?', Answer: 'style'},
+  {Fact: 'What does GNU stand for?', Answer: 'GNU\'s Not Unix'},
+  {Fact: 'What does CSS stand for?', Answer: 'Cascading style sheets'},
+  // {Fact: 'Indiana', Answer: 'Indianapolis', StatehoodYear: 1816, StatehoodOrder: 19},
+  // {Fact: 'Iowa', Answer: 'Des Moines', StatehoodYear: 1846, StatehoodOrder: 29},
+  // {Fact: 'Kansas', Answer: 'Topeka', StatehoodYear: 1861, StatehoodOrder: 34},
+  // {Fact: 'Kentucky', Answer: 'Frankfort', StatehoodYear: 1792, StatehoodOrder: 15},
+  // {Fact: 'Louisiana', Answer: 'Baton Rouge', StatehoodYear: 1812, StatehoodOrder: 18},
+  // {Fact: 'Maine', Answer: 'Augusta', StatehoodYear: 1820, StatehoodOrder: 23},
+  // {Fact: 'Maryland', Answer: 'Annapolis', StatehoodYear: 1788, StatehoodOrder: 7},
+  // {Fact: 'Massachusetts', Answer: 'Boston', StatehoodYear: 1788, StatehoodOrder: 6},
+  // {Fact: 'Michigan', Answer: 'Lansing', StatehoodYear: 1837, StatehoodOrder: 26},
+  // {Fact: 'Minnesota', Answer: 'St. Paul', StatehoodYear: 1858, StatehoodOrder: 32},
+  // {Fact: 'Mississippi', Answer: 'Jackson', StatehoodYear: 1817, StatehoodOrder: 20},
+  // {Fact: 'Missouri', Answer: 'Jefferson City', StatehoodYear: 1821, StatehoodOrder: 24},
+  // {Fact: 'Montana', Answer: 'Helena', StatehoodYear: 1889, StatehoodOrder: 41},
+  // {Fact: 'Nebraska', Answer: 'Lincoln', StatehoodYear: 1867, StatehoodOrder: 37},
+  // {Fact: 'Nevada', Answer: 'Carson City', StatehoodYear: 1864, StatehoodOrder: 36},
+  // {Fact: 'New Hampshire', Abbreviation: 'NH', Answer: 'Concord', StatehoodYear: 1788, StatehoodOrder: 9},
+  {Fact: 'What does the "Q" in QBasic stand for?', Answer: 'Quick'},
 ];
 
 const states = {
@@ -358,9 +338,9 @@ const states = {
 };
 
 const welcomeMessage = `Welcome to Programming Trivia, you can say Hello! You can ask me for a random fact, or you can ask me to start a quiz.  What would you like to do?`;
-const startQuizMessage = `OK.  I will ask you 10 questions about the United States. `;
-const exitSkillMessage = `Thank you for playing the United States Quiz Game!  Let's play again soon!`;
-const repromptSpeech = `Which other state or capital would you like to know about?`;
+const startQuizMessage = `OK.  I will ask you 5 questions about Programming Trivia. `;
+const exitSkillMessage = `Thank you for playing the Programming Trivia Game!  Let's play again soon!`;
+const repromptSpeech = `Which other state or Answer would you like to know about?`;
 const helpMessage = `I know lots of interesting programming trivia.  You can ask me for a fact, and I'll tell you what I know.  You can also test your knowledge by asking me to start a quiz.  What would you like to do?`;
 const useCardsFlag = true;
 
@@ -390,7 +370,7 @@ function getFinalScore(score, counter) {
 }
 
 function getCardTitle(item) {
-  return item.StateName;
+  return item.Fact;
 }
 
 function getSmallImage(item) {
@@ -414,7 +394,7 @@ function getBackgroundImage(label, height = 1024, width = 600) {
 }
 
 function getSpeechDescription(item) {
-  return `${item.StateName} is the ${item.StatehoodOrder}th state, admitted to the Union in ${item.StatehoodYear}.  The capital of ${item.StateName} is ${item.Capital}, and the abbreviation for ${item.StateName} is <break strength='strong'/><say-as interpret-as='spell-out'>${item.Abbreviation}</say-as>.  I've added ${item.StateName} to your Alexa app.  Which other state or capital would you like to know about?`;
+  return `${item.Fact} is the ${item.StatehoodOrder}th state, admitted to the Union in ${item.StatehoodYear}.  The Answer of ${item.Fact} is ${item.Answer}, and the abbreviation for ${item.Fact} is <break strength='strong'/><say-as interpret-as='spell-out'>${item.Abbreviation}</say-as>.  I've added ${item.Fact} to your Alexa app.  Which other state or Answer would you like to know about?`;
 }
 
 function formatCasing(key) {
@@ -422,21 +402,21 @@ function formatCasing(key) {
 }
 
 function getQuestion(counter, property, item) {
-  return `Here is your ${counter}th question.  What is the ${formatCasing(property)} of ${item.StateName}?`;
+  return `Here is your ${counter}th question.  What is the ${formatCasing(property)} of ${item.Fact}?`;
 }
 
 // getQuestionWithoutOrdinal returns the question without the ordinal and is
 // used for the echo show.
 function getQuestionWithoutOrdinal(property, item) {
-  return "What is the " + formatCasing(property).toLowerCase() + " of "  + item.StateName + "?";
+  return "What is the " + formatCasing(property).toLowerCase() + " of "  + item.Fact + "?";
 }
 
 function getAnswer(property, item) {
   switch (property) {
     case 'Abbreviation':
-      return `The ${formatCasing(property)} of ${item.StateName} is <say-as interpret-as='spell-out'>${item[property]}</say-as>. `;
+      return `The ${formatCasing(property)} of ${item.Fact} is <say-as interpret-as='spell-out'>${item[property]}</say-as>. `;
     default:
-      return `The ${formatCasing(property)} of ${item.StateName} is ${item[property]}. `;
+      return `The ${formatCasing(property)} of ${item.Fact} is ${item[property]}. `;
   }
 }
 
