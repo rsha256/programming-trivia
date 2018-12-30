@@ -16,7 +16,7 @@
       },
       "resources": {
         "manifest": {
-          "eTag": "22a9f413962ba2eb9932457b5e26fbe8"
+          "eTag": "03f182c05c3774331623cac1aaa034a7"
         },
         "interactionModel": {
           "en-US": {
@@ -33,7 +33,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-programming-trivia-default",
             "handler": "index.handler",
-            "revisionId": "9f74c599-9615-44cd-bd3c-ff57d23c0eaf",
+            "revisionId": "d54bf126-4b54-49c2-a4ea-5ccc3e19f2b7",
             "runtime": "nodejs8.10"
           }
         ]
