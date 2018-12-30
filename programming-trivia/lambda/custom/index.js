@@ -40,7 +40,7 @@ const QuizHandler = {
     attributes.quizScore = 0;
 
     var question = askQuestion(handlerInput);
-    var speakOutput = startQuizMessage + question;
+    var speakOutput = question;
     var repromptOutput = question;
 
     const item = attributes.quizItem;
@@ -190,6 +190,7 @@ const QuizAnswerHandler = {
       return response.speak(speakOutput)
       .reprompt(repromptOutput)
       .getResponse();
+      counter++;
     }
     else {
       speakOutput += getFinalScore(attributes.quizScore, attributes.counter) + exitSkillMessage;
@@ -300,7 +301,7 @@ const backgroundImagePath = "https://m.media-amazon.com/images/G/01/mobile-apps/
 const speechConsCorrect = ['Booya', 'All righty', 'Bam', 'Bazinga', 'Bingo', 'Boom', 'Bravo', 'Cha Ching', 'Cheers', 'Dynomite', 'Hip hip hooray', 'Hurrah', 'Hurray', 'Huzzah', 'Oh dear.  Just kidding.  Hurray', 'Kaboom', 'Kaching', 'Oh snap', 'Phew','Righto', 'Way to go', 'Well done', 'Whee', 'Woo hoo', 'Yay', 'Wowza', 'Yowsa'];
 const speechConsWrong = ['Argh', 'Aw man', 'Blarg', 'Blast', 'Boo', 'Bummer', 'Darn', "D'oh", 'Dun dun dun', 'Eek', 'Honk', 'Le sigh', 'Mamma mia', 'Oh boy', 'Oh dear', 'Oof', 'Ouch', 'Ruh roh', 'Shucks', 'Uh oh', 'Wah wah', 'Whoops a daisy', 'Yikes'];
 const data = [
-  {Fact: 'to Who created Linux?', Answer: 'Linus Torvalds'},
+  {Fact: 'Who created Linux?', Answer: 'Linus Torvalds'},
   {Fact: 'What is the oldest Programming Language?', Answer: 'Fortran'},
   {Fact: 'Who is the creator of the JavaScript scripting language?', Answer: 'Brendan Eich'},
   {Fact: 'What is the origin of the Python scripting language\'s name?', Answer: 'Monty Python\'s Flying Circus'},
@@ -337,8 +338,8 @@ const states = {
   QUIZ: `_QUIZ`,
 };
 
-const welcomeMessage = `Welcome to Programming Trivia, you can say Hello! You can ask me for a random fact, or you can ask me to start a quiz.  What would you like to do?`;
-const startQuizMessage = `OK.  I will ask you 5 questions about Programming Trivia. `;
+const welcomeMessage = `Welcome to Programming Trivia! You can ask me for a random fact, or you can ask me to start a quiz.  What would you like to do?`;
+const startQuizMessage = `OK. I will ask you 5 questions about Programming Trivia.`;
 const exitSkillMessage = `Thank you for playing the Programming Trivia Game!  Let's play again soon!`;
 const repromptSpeech = `Which other state or Answer would you like to know about?`;
 const helpMessage = `I know lots of interesting programming trivia.  You can ask me for a fact, and I'll tell you what I know.  You can also test your knowledge by asking me to start a quiz.  What would you like to do?`;

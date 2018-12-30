@@ -34,8 +34,6 @@
         {
           "name": "AnswerIntent",
           "samples": [
-            "{Fact}",
-            "{Answer}",
             "tell me a {Fact}"
           ],
           "slots": [
@@ -50,6 +48,18 @@
               "samples": []
             }
           ]
+        },
+        {
+          "name": "HelloIntent",
+          "samples": [
+            "start a quiz",
+            "start a quiz game",
+            "and start a quiz",
+            "and quiz me",
+            "for a quiz",
+            "a quiz"
+          ],
+          "slots": []
         },
         {
           "name": "QuizIntent",

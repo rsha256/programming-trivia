@@ -20,7 +20,7 @@
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "64c997ba8f35ddad22198779363c0c88"
+            "eTag": "9d43862af332b7401caa29c241b19c66"
           }
         },
         "lambda": [
@@ -33,7 +33,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-programming-trivia-default",
             "handler": "index.handler",
-            "revisionId": "75cc37da-ac7e-470c-b6ab-65360081ff6d",
+            "revisionId": "9f74c599-9615-44cd-bd3c-ff57d23c0eaf",
             "runtime": "nodejs8.10"
           }
         ]

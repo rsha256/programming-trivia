@@ -5,8 +5,8 @@
         "en-US": {
           "summary": "Test your knowledge of the US states and their capitals.",
           "examplePhrases": [
-            "Alexa, open States Quiz",
-            "Alexa, play States Quiz"
+            "Alexa, open Programming Trivia",
+            "Alexa, play Programming Trivia"
           ],
           "keywords": [
             "quiz",
@@ -14,9 +14,9 @@
             "geography"
           ],
           "name": "Programming Trivia",
-          "description": "Test your knowledge of the US states and their capitals.\n\nStates Quiz provides a fun way to keep your U.S. geography skills sharp.\n\nTo start, just say \"Alexa, launch States Quiz\" or \"Alexa, open States Quiz\" to start the game\".\n\nAt anytime, you can stop the game by saying \"Alexa, stop\"",
-          "smallIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/skill-template-default-sm.png",
-          "largeIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/skill-template-default-lg.png"
+          "description": "Test your knowledge of Programming Trivia.\n\nProgramming Trivia provides a fun way to keep programmer's trivia skills sharp.\n\nTo start, just say \"Alexa, launch Programming Trivia\" or \"Alexa, open Programming Trivia\" to start the game\".\n\nAt anytime, you can stop the game by saying \"Alexa, stop\"",
+          "smallIconUri": "https://rshah2020.github.io/programming-trivia/small-logo.png",
+          "largeIconUri": "https://rshah2020.github.io/programming-trivia/logo.png"
         }
       },
       "isAvailableWorldwide": true,
@@ -36,8 +36,8 @@
       "allowsPurchases": false,
       "locales": {
         "en-US": {
-          "termsOfUseUrl": "http://dabblelab.com/terms",
-          "privacyPolicyUrl": "http://dabblelab.com/privacy"
+          "termsOfUseUrl": "https://rshah2020.github.io/programming-trivia/terms.html",
+          "privacyPolicyUrl": "https://rshah2020.github.io/programming-trivia/privacy.html"
         }
       },
       "isExportCompliant": true,
