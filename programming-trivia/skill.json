@@ -3,7 +3,7 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Test your knowledge of the US states and their capitals.",
+          "summary": "Test your knowledge of programming questions for various languages.",
           "examplePhrases": [
             "Alexa, open Programming Trivia",
             "Alexa, play Programming Trivia"
@@ -11,7 +11,7 @@
           "keywords": [
             "quiz",
             "games",
-            "geography"
+            "programming"
           ],
           "name": "Programming Trivia",
           "description": "Test your knowledge of Programming Trivia.\n\nProgramming Trivia provides a fun way to keep programmer's trivia skills sharp.\n\nTo start, just say \"Alexa, launch Programming Trivia\" or \"Alexa, open Programming Trivia\" to start the game\".\n\nAt anytime, you can stop the game by saying \"Alexa, stop\"",
